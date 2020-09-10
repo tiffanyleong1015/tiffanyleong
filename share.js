@@ -1,15 +1,16 @@
+
 const btn = document.querySelector('btn');
 const result = document.querySelector('.result');
 
 btn.addEventListener('click', function(){
-    const blah = document.getElementById('blah')
+    const blah = document.getElementById('blah').src
     const url = URL.createObjectURL(blah)
     const shareData = {
         url: url,
         text: '相片',
         title: '發現中小企'
       };
-    async () => {
+async () => {
   try {
     await navigator.share(shareData);
     result.textContent = '感謝你的的分享';
