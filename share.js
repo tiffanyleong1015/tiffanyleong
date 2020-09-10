@@ -1,9 +1,9 @@
-
 const btn = document.querySelector('btn');
 const result = document.querySelector('.result');
 
 btn.addEventListener('click', function(){
-    const url = URL.createObjectURL(querySelector('#blah'))
+    const blah = document.getElementById('blah')
+    const url = URL.createObjectURL(blah)
     const shareData = {
         url: url,
         text: '相片',
