@@ -2,16 +2,13 @@
 const btn = document.querySelector('btn');
 const result = document.querySelector('.result');
 
-const url = URL.createObjectURL(querySelector('#blah'))
-
-const shareData = {
-  url: url,
-  text: '相片',
-  title: '發現中小企'
-};
-
 btn.addEventListener('click', function(){
-    url = URL.createObjectURL(querySelector('#blah'))
+    const url = URL.createObjectURL(querySelector('#blah'))
+    const shareData = {
+        url: url,
+        text: '相片',
+        title: '發現中小企'
+      };
     async () => {
   try {
     await navigator.share(shareData);
